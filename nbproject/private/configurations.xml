@@ -26,8 +26,9 @@
         <runcommandpicklist>
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot .</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot .</runcommand>
+        <runcommand>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

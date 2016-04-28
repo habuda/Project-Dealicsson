@@ -4,6 +4,23 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Functions.hh</itemPath>
+      <itemPath>Session.hh</itemPath>
+      <itemPath>Singleton.hh</itemPath>
+      <itemPath>Templates.hh</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f1" displayName="model" projectFiles="true" kind="ROOT">
+      <logicalFolder name="f1"
+                     displayName="db_objects"
+                     projectFiles="true"
+                     kind="ROOT">
+        <itemPath>model/db_objects/User.cc</itemPath>
+        <itemPath>model/db_objects/User.hh</itemPath>
+      </logicalFolder>
+      <itemPath>model/ModelData.cc</itemPath>
+      <itemPath>model/ModelData.hh</itemPath>
+      <itemPath>model/ModelUser.cc</itemPath>
+      <itemPath>model/ModelUser.hh</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,7 +29,22 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Functions.cc</itemPath>
+      <itemPath>Session.cc</itemPath>
+      <itemPath>Templates.cc</itemPath>
       <itemPath>main.cc</itemPath>
+    </logicalFolder>
+    <logicalFolder name="f2" displayName="view" projectFiles="true" kind="ROOT">
+      <itemPath>view/Controller.cc</itemPath>
+      <itemPath>view/Controller.hh</itemPath>
+      <itemPath>view/Widget.cc</itemPath>
+      <itemPath>view/Widget.hh</itemPath>
+      <itemPath>view/WidgetFooter.cc</itemPath>
+      <itemPath>view/WidgetFooter.hh</itemPath>
+      <itemPath>view/WidgetHeader.cc</itemPath>
+      <itemPath>view/WidgetHeader.hh</itemPath>
+      <itemPath>view/WidgetIndex.cc</itemPath>
+      <itemPath>view/WidgetIndex.hh</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -25,6 +57,12 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>templates/footer.tpl</itemPath>
+    <itemPath>resources/functions.js</itemPath>
+    <itemPath>templates/header.tpl</itemPath>
+    <itemPath>templates/index.tpl</itemPath>
+    <itemPath>resources/moz-transitions.css</itemPath>
+    <itemPath>resources/themes/default/wt.css</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -47,7 +85,65 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="Functions.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Functions.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Session.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Session.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Singleton.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Templates.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Templates.hh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelData.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelData.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/ModelUser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelUser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/db_objects/User.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/db_objects/User.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/functions.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/moz-transitions.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/themes/default/wt.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/footer.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/header.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/index.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/Controller.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/Controller.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/Widget.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/Widget.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetFooter.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetFooter.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetHeader.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetHeader.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetIndex.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetIndex.hh" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -71,7 +167,65 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Functions.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Functions.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Session.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Session.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Singleton.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Templates.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Templates.hh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelData.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelData.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/ModelUser.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelUser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/db_objects/User.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/db_objects/User.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/functions.js" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/moz-transitions.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="resources/themes/default/wt.css" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/footer.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/header.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="templates/index.tpl" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/Controller.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/Controller.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/Widget.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/Widget.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetFooter.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetFooter.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetHeader.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetHeader.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetIndex.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetIndex.hh" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
