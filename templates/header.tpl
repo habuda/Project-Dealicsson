@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index">DealiCsson</a>
+            <a class="navbar-brand" href="/">DealiCsson</a>
         </div>
         <ul class="nav navbar-nav">
             <li><a href="#">Production</a></li>
