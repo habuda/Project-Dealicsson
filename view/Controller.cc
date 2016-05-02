@@ -104,6 +104,10 @@ void Controller::handlePathChange(const std::string& a_sPath)
     {
         m_pWidget = new WidgetSales(this, this);
     }
+    else if(l_sPath == "production")
+    {
+        m_pWidget = new WidgetProduction(this, this);
+    }
     
     if(!m_pWidgetFooter)
         m_pWidgetFooter = new WidgetFooter(this, this);

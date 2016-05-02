@@ -4,7 +4,7 @@
             <a class="navbar-brand" href="/">DealiCsson</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="#">Production</a></li>
+            <li><a href="production">Production</a></li>
             <li>${sales}</li>
             <li><a href="#">Stats</a></li>
         </ul>
