@@ -21,7 +21,7 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=GNU-Linux
+CND_PLATFORM=None-Linux-x86
 CND_DLIB_EXT=so
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -46,7 +46,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/view/Widget.o \
 	${OBJECTDIR}/view/WidgetFooter.o \
 	${OBJECTDIR}/view/WidgetHeader.o \
-	${OBJECTDIR}/view/WidgetIndex.o
+	${OBJECTDIR}/view/WidgetIndex.o \
+	${OBJECTDIR}/view/WidgetProduction.o \
+	${OBJECTDIR}/view/WidgetSales.o
 
 
 # C Compiler Flags
@@ -132,6 +134,16 @@ ${OBJECTDIR}/view/WidgetIndex.o: view/WidgetIndex.cc
 	${MKDIR} -p ${OBJECTDIR}/view
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/view/WidgetIndex.o view/WidgetIndex.cc
+
+${OBJECTDIR}/view/WidgetProduction.o: view/WidgetProduction.cc 
+	${MKDIR} -p ${OBJECTDIR}/view
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/view/WidgetProduction.o view/WidgetProduction.cc
+
+${OBJECTDIR}/view/WidgetSales.o: view/WidgetSales.cc 
+	${MKDIR} -p ${OBJECTDIR}/view
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/view/WidgetSales.o view/WidgetSales.cc
 
 # Subprojects
 .build-subprojects:

@@ -30,8 +30,10 @@ class Templates
 private:
     WString m_wsFooter;
     WString m_wsHeader;
-    WString m_wsIndex;
-
+    WString m_wsIndex;  
+    WString m_wsSales;
+    WString m_wsProduction;
+    
     WString openTemplate(std::string a_sFileName);
 
 public:
@@ -41,6 +43,8 @@ public:
     inline WString getFooter()                  { return m_wsFooter; }
     inline WString getHeader()                  { return m_wsHeader; }
     inline WString getIndex()                   { return m_wsIndex; }
+    inline WString getSales()                   { return m_wsSales; }
+    inline WString getProduction()              { return m_wsProduction; }
 };    
   
 //==================================================================================================

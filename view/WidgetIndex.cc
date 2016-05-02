@@ -16,14 +16,10 @@ WidgetIndex::WidgetIndex(Controller *a_pController, Wt::WContainerWidget *a_pPar
 {
     setStyleClass("index");
     
-    std::cerr << "\nk1\n";
-    
     WString tpl = SINGLETON(Templates).getIndex();
 
-    std::cerr << "\nk2: " << tpl << "\n";
     m_pTemplate = new WTemplate(this);
     m_pTemplate->setTemplateText( tpl,  XHTMLUnsafeText );
-    std::cerr << "\nk3\n";
 }
 
 //==================================================================================================

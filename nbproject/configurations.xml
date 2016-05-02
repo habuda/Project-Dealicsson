@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="97">
+<configurationDescriptor version="95">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -9,11 +9,8 @@
       <itemPath>Singleton.hh</itemPath>
       <itemPath>Templates.hh</itemPath>
     </logicalFolder>
-    <logicalFolder name="f1" displayName="model" projectFiles="true" kind="ROOT">
-      <logicalFolder name="f1"
-                     displayName="db_objects"
-                     projectFiles="true"
-                     kind="ROOT">
+    <logicalFolder name="f1" displayName="model" projectFiles="true">
+      <logicalFolder name="f1" displayName="db_objects" projectFiles="true">
         <itemPath>model/db_objects/User.cc</itemPath>
         <itemPath>model/db_objects/User.hh</itemPath>
       </logicalFolder>
@@ -34,7 +31,7 @@
       <itemPath>Templates.cc</itemPath>
       <itemPath>main.cc</itemPath>
     </logicalFolder>
-    <logicalFolder name="f2" displayName="view" projectFiles="true" kind="ROOT">
+    <logicalFolder name="f2" displayName="view" projectFiles="true">
       <itemPath>view/Controller.cc</itemPath>
       <itemPath>view/Controller.hh</itemPath>
       <itemPath>view/Widget.cc</itemPath>
@@ -45,6 +42,10 @@
       <itemPath>view/WidgetHeader.hh</itemPath>
       <itemPath>view/WidgetIndex.cc</itemPath>
       <itemPath>view/WidgetIndex.hh</itemPath>
+      <itemPath>view/WidgetProduction.cc</itemPath>
+      <itemPath>view/WidgetProduction.hh</itemPath>
+      <itemPath>view/WidgetSales.cc</itemPath>
+      <itemPath>view/WidgetSales.hh</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -62,6 +63,7 @@
     <itemPath>templates/header.tpl</itemPath>
     <itemPath>templates/index.tpl</itemPath>
     <itemPath>resources/moz-transitions.css</itemPath>
+    <itemPath>templates/sales.tpl</itemPath>
     <itemPath>resources/themes/default/wt.css</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -125,6 +127,8 @@
       </item>
       <item path="templates/index.tpl" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="templates/sales.tpl" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="view/Controller.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="view/Controller.hh" ex="false" tool="3" flavor2="0">
@@ -144,6 +148,14 @@
       <item path="view/WidgetIndex.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="view/WidgetIndex.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetProduction.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetProduction.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetSales.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetSales.hh" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -207,6 +219,8 @@
       </item>
       <item path="templates/index.tpl" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="templates/sales.tpl" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="view/Controller.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="view/Controller.hh" ex="false" tool="3" flavor2="0">
@@ -226,6 +240,14 @@
       <item path="view/WidgetIndex.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="view/WidgetIndex.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetProduction.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetProduction.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="view/WidgetSales.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="view/WidgetSales.hh" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

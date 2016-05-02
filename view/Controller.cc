@@ -14,7 +14,8 @@
 #include "WidgetFooter.hh"
 #include "WidgetHeader.hh"
 #include "WidgetIndex.hh"
-
+#include "WidgetSales.hh"
+#include "WidgetProduction.hh"
 //==================================================================================================
 
 using namespace Wt;
@@ -29,10 +30,13 @@ Controller::Controller(const std::string& a_sBasePath, const std::string& a_sDat
             m_pWidgetHeader(0),
             m_pWidgetFooter(0)
 {
-    wApp->setTitle(utf8("Dealicsson"));
+    wApp->setTitle(utf8("DealiCsson - first dealing game"));
     wApp->messageResourceBundle().use( WApplication::appRoot() );
     wApp->internalPathChanged().connect(this, &Controller::handlePathChange);
     
+    //------css
+    wApp->useStyleSheet("/resources/bootstrap/css/bootstrap.css");
+    wApp->useStyleSheet("/resources/style.css");
 //    wApp->useStyleSheet("/resources/assets/css/bootstrap.css");
 //    wApp->useStyleSheet("/resources/assets/css/font-awesome.css");
 //    wApp->useStyleSheet("/resources/assets/css/ace-fonts.css");
@@ -44,11 +48,14 @@ Controller::Controller(const std::string& a_sBasePath, const std::string& a_sDat
 //    wApp->require("http://code.jquery.com/jquery-latest.js");
 //    wApp->require("/resources/assets/js/jquery.colorbox.js");
 //    wApp->require("/resources/assets/js/bootstrap.js");
-    wApp->require("/resources/functions.js");
     
+    //------java script
+    wApp->require("https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js");
+    wApp->require("resources/bootstrap/js/bootstrap.min.js");
+    wApp->require("/resources/functions.js");
     m_Session.setUser(dbo::ptr<User>());
     
-    m_pWidgetHeader     = new WidgetHeader(this, this);
+    m_pWidgetHeader = new WidgetHeader(this, this);
     
     handlePathChange(wApp->internalPath());
 }
@@ -88,18 +95,15 @@ void Controller::handlePathChange(const std::string& a_sPath)
 
     hideAllWidget();
     
-    std::cerr << "\n11111111111\n";
     
     if(l_sPath == "")
     {
-    std::cerr << "\n11111111111BBB\n";
         m_pWidget = new WidgetIndex(this, this);
     }
-    else if(l_sPath == "statystyki")
+    else if(l_sPath == "sales")
     {
-        //m_pWidget = new WidgetStats
+        m_pWidget = new WidgetSales(this, this);
     }
-    std::cerr << "\n11111111111BBBCCC\n";
     
     if(!m_pWidgetFooter)
         m_pWidgetFooter = new WidgetFooter(this, this);

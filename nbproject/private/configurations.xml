@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="97">
+<configurationDescriptor version="95">
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <developmentServer>kdur@172.23.8.130:22</developmentServer>
+        <developmentServer>troz@172.23.8.130:22</developmentServer>
         <platform>2</platform>
       </toolsSet>
       <dbx_gdbdebugger version="1">
@@ -27,8 +27,9 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot .</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" --http-port 8887 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" --http-port 4444 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommand>
+        <runcommand>"${OUTPUT_PATH}" --http-port 8887 --http-addr 0.0.0.0 --docroot=".;/resources"</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

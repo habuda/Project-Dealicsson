@@ -17,6 +17,8 @@ Templates::Templates()
     m_wsFooter                  = openTemplate("footer.tpl");
     m_wsHeader                  = openTemplate("header.tpl");
     m_wsIndex                   = openTemplate("index.tpl");
+    m_wsSales                   = openTemplate("sales.tpl");
+    m_wsProduction              = openTemplate("production.tpl");
 }
 
 //==================================================================================================

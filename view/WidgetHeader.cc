@@ -9,6 +9,8 @@
 
 #include "WidgetHeader.hh"
 
+#include <Wt/WAnchor>
+
 //==================================================================================================
 
 WidgetHeader::WidgetHeader(Controller *a_pController, Wt::WContainerWidget *a_pParent)
@@ -18,6 +20,12 @@ WidgetHeader::WidgetHeader(Controller *a_pController, Wt::WContainerWidget *a_pP
 
     m_pTemplate = new WTemplate(this);
     m_pTemplate->setTemplateText( tpl,  XHTMLUnsafeText );
+    
+    WAnchor *l_paSales = new WAnchor();
+    l_paSales->setText("Sales");
+    l_paSales->setRefInternalPath("/sales");
+    
+    m_pTemplate->bindWidget("sales", l_paSales);
 }
 
 //==================================================================================================
