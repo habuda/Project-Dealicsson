@@ -5,4 +5,5 @@
         Start <span class="glyphicon glyphicon-play-circle"></span>
     </button> 
     <div class="push"></div>
-</div>v
+    ${start} ${stop} ${c}
+</div>
