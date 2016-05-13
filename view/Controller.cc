@@ -60,6 +60,7 @@ Controller::Controller(const std::string& a_sBasePath, const std::string& a_sDat
     m_Session.setUser(dbo::ptr<User>());
     
     m_pWidgetHeader = new WidgetHeader(this, this);
+    m_pWidgetHeader->hideTabs();
     
     std::cout<< "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEe" << std::endl;
     
@@ -103,10 +104,16 @@ void Controller::handlePathChange(const std::string& a_sPath)
 
     hideAllWidget();
     
+    if(m_Session.game()){
+        m_pWidgetHeader->showTabs();
+    }
+    else if(!m_Session.game()){
+        m_pWidgetHeader->hideTabs();
+    }
     
     if(l_sPath == "")
     {
-        m_pWidget = new WidgetIndex(this, this);
+        m_pWidget = new WidgetIndex(this, this);  
     }
     else if(l_sPath == "sales")
     {

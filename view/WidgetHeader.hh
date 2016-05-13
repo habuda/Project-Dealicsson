@@ -21,6 +21,14 @@ class WidgetHeader : public Widget
 public:
     WidgetHeader(Controller *a_pController = 0, Wt::WContainerWidget *a_pParent = 0);
     virtual ~WidgetHeader();
+    
+    void hideTabs();
+    void showTabs();
+    
+private:
+    WAnchor *l_paSales;
+    WAnchor *l_paProduction;
+    WAnchor *l_paDealiCsson;
 };
 
 //==================================================================================================

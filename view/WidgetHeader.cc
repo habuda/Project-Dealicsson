@@ -21,19 +21,19 @@ WidgetHeader::WidgetHeader(Controller *a_pController, Wt::WContainerWidget *a_pP
     m_pTemplate = new WTemplate(this);
     m_pTemplate->setTemplateText( tpl,  XHTMLUnsafeText );
     
-    WAnchor *l_paSales = new WAnchor();
+    l_paSales = new WAnchor();
     l_paSales->setText("Sales");
     l_paSales->setRefInternalPath("/sales");
     
     m_pTemplate->bindWidget("sales", l_paSales);
     
-    WAnchor *l_paProduction = new WAnchor();
+    l_paProduction = new WAnchor();
     l_paProduction->setText("Production");
     l_paProduction->setRefInternalPath("/production");
     
     m_pTemplate->bindWidget("production", l_paProduction);
     
-    WAnchor *l_paDealiCsson = new WAnchor();
+    l_paDealiCsson = new WAnchor();
     l_paDealiCsson->setText("DealiCsson");
     l_paDealiCsson->setRefInternalPath("/");
     l_paDealiCsson->addStyleClass("navbar-brand");
@@ -48,3 +48,14 @@ WidgetHeader::~WidgetHeader()
 }
 
 //==================================================================================================
+
+void WidgetHeader::hideTabs(){
+    l_paSales->hide();
+    l_paProduction->hide();
+}
+
+//==================================================================================================
+void WidgetHeader::showTabs(){
+    l_paSales->show();
+    l_paProduction->show();   
+}

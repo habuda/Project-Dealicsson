@@ -6,7 +6,6 @@
         <ul class="nav navbar-nav">
             <li>${production}</a></li>
             <li>${sales}</li>
-            <li><a href="#">Stats</a></li>
         </ul>
     </div>
 </nav>
