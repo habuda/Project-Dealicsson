@@ -7,5 +7,10 @@
     <br/><br/>
     <button type="button" class="btn btn-primary">
         Hire employee <span class="glyphicon glyphicon-plus"></span>
-    </button>       
+    </button>
+    <span id="licznik">
+        ${seed}
+        ${textWeed}
+    </span>
+       
 </div>

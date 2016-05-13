@@ -23,19 +23,24 @@
 namespace dbo = Wt::Dbo;
 
 class User;
+class Game;
 
 class Session : public dbo::Session
 {
 public:
   Session(const std::string& sqliteDb);
 
-  void setUser(dbo::ptr<User> user);
+  void setUser(dbo::ptr<User> user) { user_ = user; }
   dbo::ptr<User> user() const { return user_; }
-
+  
+  void setGame(dbo::ptr<Game> game) { game_ = game; };
+  dbo::ptr<Game> game() const { return game_; }
 
 private:
   dbo::backend::Sqlite3 connection_;
   dbo::ptr<User> user_;
+  dbo::ptr<Game> game_;
+ 
 };
 
 //==================================================================================================

@@ -11,13 +11,19 @@
     </logicalFolder>
     <logicalFolder name="f1" displayName="model" projectFiles="true">
       <logicalFolder name="f1" displayName="db_objects" projectFiles="true">
+        <itemPath>model/db_objects/Game.cc</itemPath>
+        <itemPath>model/db_objects/Game.hh</itemPath>
         <itemPath>model/db_objects/User.cc</itemPath>
         <itemPath>model/db_objects/User.hh</itemPath>
       </logicalFolder>
       <itemPath>model/ModelData.cc</itemPath>
       <itemPath>model/ModelData.hh</itemPath>
+      <itemPath>model/ModelGame.cc</itemPath>
+      <itemPath>model/ModelGame.hh</itemPath>
       <itemPath>model/ModelUser.cc</itemPath>
       <itemPath>model/ModelUser.hh</itemPath>
+      <itemPath>model/Product.cc</itemPath>
+      <itemPath>model/Product.hh</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -107,9 +113,21 @@
       </item>
       <item path="model/ModelData.hh" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="model/ModelGame.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelGame.hh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="model/ModelUser.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="model/ModelUser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/Product.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/Product.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/db_objects/Game.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/db_objects/Game.hh" ex="false" tool="3" flavor2="0">
       </item>
       <item path="model/db_objects/User.cc" ex="false" tool="1" flavor2="0">
       </item>
@@ -199,9 +217,21 @@
       </item>
       <item path="model/ModelData.hh" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="model/ModelGame.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/ModelGame.hh" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="model/ModelUser.cc" ex="false" tool="1" flavor2="0">
       </item>
       <item path="model/ModelUser.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/Product.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/Product.hh" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="model/db_objects/Game.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="model/db_objects/Game.hh" ex="false" tool="3" flavor2="0">
       </item>
       <item path="model/db_objects/User.cc" ex="false" tool="1" flavor2="0">
       </item>

@@ -13,6 +13,9 @@
 //==================================================================================================
 
 #include "Widget.hh"
+#include <Wt/WContainerWidget>
+#include <Wt/WLineEdit>
+#include <Wt/WAnchor>
 
 //==================================================================================================
 
@@ -25,6 +28,14 @@ class WidgetIndex : public Widget
 public:
     WidgetIndex(Controller *a_pController = 0, Wt::WContainerWidget *a_pParent = 0);
     virtual ~WidgetIndex();
+    
+    void loadGameById();
+    void newGame();
+    
+private:
+    WAnchor *start;
+    WAnchor *load;
+    WLineEdit        *textField;
 };
 
 //==================================================================================================

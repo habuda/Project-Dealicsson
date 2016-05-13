@@ -24,21 +24,17 @@ Session::Session(const std::string& sqliteDb)
     setConnection(connection_);
 
     mapClass<User>("user");
+    mapClass<Game>("game");
 
-//    try
-//    {
-//        createTables();
-//    }
-//    catch(std::exception& e)
-//    {
-//        std::cerr << e.what() << std::endl;
-//        std::cerr << "Using existing database";
-//    }
-}
-
-void Session::setUser(dbo::ptr<User> user)
-{
-  user_ = user;
+    try
+    {
+        createTables();
+    }
+    catch(std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+        std::cerr << "Using existing database";
+    }
 }
 
 //==================================================================================================

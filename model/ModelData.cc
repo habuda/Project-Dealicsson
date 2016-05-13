@@ -13,7 +13,8 @@
 
 ModelData::ModelData(Session &a_rSession)
         :   m_rSession(a_rSession),
-            m_ModelUser(this, a_rSession)
+            m_ModelUser(this, a_rSession),
+            m_ModelGame(this,a_rSession)
 {
 }
 

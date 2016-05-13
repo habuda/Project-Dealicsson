@@ -1,13 +1,12 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
-            
-            ${DealiCsson}
-            ̣̣<!-- <a class="navbar-brand" href="/">DealiCsson</a> -->
+           ${dealicsson}
         </div>
         <ul class="nav navbar-nav">
-            <li>${production}</li>
+            <li>${production}</a></li>
             <li>${sales}</li>
+            <li><a href="#">Stats</a></li>
         </ul>
     </div>
 </nav>

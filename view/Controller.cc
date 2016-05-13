@@ -9,6 +9,8 @@
 
 #include <Wt/WEnvironment>
 
+#include <iostream>
+
 #include "Controller.hh"
 
 #include "WidgetFooter.hh"
@@ -16,6 +18,8 @@
 #include "WidgetIndex.hh"
 #include "WidgetSales.hh"
 #include "WidgetProduction.hh"
+
+#include "../model/Product.hh"
 //==================================================================================================
 
 using namespace Wt;
@@ -28,7 +32,7 @@ Controller::Controller(const std::string& a_sBasePath, const std::string& a_sDat
             m_ModelData(m_Session),
             m_pWidget(0),
             m_pWidgetHeader(0),
-            m_pWidgetFooter(0)
+            m_pWidgetFooter(0),weed()
 {
     wApp->setTitle(utf8("DealiCsson - first dealing game"));
     wApp->messageResourceBundle().use( WApplication::appRoot() );
@@ -56,6 +60,10 @@ Controller::Controller(const std::string& a_sBasePath, const std::string& a_sDat
     m_Session.setUser(dbo::ptr<User>());
     
     m_pWidgetHeader = new WidgetHeader(this, this);
+    
+    std::cout<< "HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEe" << std::endl;
+    
+    
     
     handlePathChange(wApp->internalPath());
 }

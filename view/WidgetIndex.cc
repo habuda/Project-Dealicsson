@@ -8,52 +8,49 @@
 //==================================================================================================
 
 #include "WidgetIndex.hh"
-#include <Wt/WAnchor>
+
+#include <Wt/WText>
+#include <Wt/WIntValidator>
+#include <iostream>
+#include "../Functions.hh"
+#include <Wt/WApplication>
 #include <Wt/WPushButton>
-#include <Wt/WTimer>
+
 //==================================================================================================
 
-    int c = 0;
-
-
-    
 WidgetIndex::WidgetIndex(Controller *a_pController, Wt::WContainerWidget *a_pParent)
             : Widget(a_pController, a_pParent)
 {
     setStyleClass("index");
     
     WString tpl = SINGLETON(Templates).getIndex();
-
     m_pTemplate = new WTemplate(this);
     m_pTemplate->setTemplateText( tpl,  XHTMLUnsafeText );
-    
-    
-    WAnchor *start = new WAnchor();
-    start->setText("start");
+
+    //////////////////////////////BUTTON_START//////////////////////////////////;  
+    start = new WAnchor();
+    m_pTemplate->bindWidget("start",start);
+    start->clicked().connect(this, &WidgetIndex::newGame);
     start->setStyleClass("btn btn-primary");
-    start->clicked().connect(std::bind([=](){
-
-    }));
+    start->setText("Start");
+    start->setRefInternalPath("/production");
+    ////////////////////////////////////////////////////////////////////////////
     
-    m_pTemplate->bindWidget("start", start);
-        
-    WAnchor *stop = new WAnchor();
-    stop->setText("stop");
-    stop->setStyleClass("btn btn-danger");
-    stop->clicked().connect(std::bind([=](){
-        for(int i = 0; i < 10; i++)
-        {
-            WTimer *timer = new WTimer();
-            timer->setInterval(2000);
-            timer->start();
-            ++c;
-        }
-    }));
+    //////////////////////////////BUTTON_LOAD///////////////////////////////////
+    load = new WAnchor();
+    m_pTemplate->bindWidget("load",load);
+    load->clicked().connect(this, &WidgetIndex::loadGameById);
+    load->setStyleClass("btn btn-primary");
+    load->addWidget(new WText("Load"));
+    load->setRefInternalPath("/production");
+    ////////////////////////////////////////////////////////////////////////////
     
-    m_pTemplate->bindWidget("stop", stop);
+    //////////////////////////////TEXT_FIELD////////////////////////////////////
+    textField = new Wt::WLineEdit();
+    textField->setValidator(new Wt::WIntValidator(0, 130));
+    m_pTemplate->bindWidget("textField",textField);
+    ////////////////////////////////////////////////////////////////////////////
 }
-
-
 
 //==================================================================================================
 
@@ -62,3 +59,14 @@ WidgetIndex::~WidgetIndex()
 }
 
 //==================================================================================================
+
+void WidgetIndex::newGame()
+{
+    m_pController->m_Session.setGame(m_pController->m_ModelData.m_ModelGame.createNewGame());  
+}
+
+void WidgetIndex::loadGameById()
+{
+    long long id = WStringToInt(textField->text());
+    m_pController->m_Session.setGame(m_pController->m_ModelData.m_ModelGame.getGameById(id));
+}

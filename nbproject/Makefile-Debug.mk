@@ -40,7 +40,10 @@ OBJECTFILES= \
 	${OBJECTDIR}/Templates.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/model/ModelData.o \
+	${OBJECTDIR}/model/ModelGame.o \
 	${OBJECTDIR}/model/ModelUser.o \
+	${OBJECTDIR}/model/Product.o \
+	${OBJECTDIR}/model/db_objects/Game.o \
 	${OBJECTDIR}/model/db_objects/User.o \
 	${OBJECTDIR}/view/Controller.o \
 	${OBJECTDIR}/view/Widget.o \
@@ -108,10 +111,25 @@ ${OBJECTDIR}/model/ModelData.o: model/ModelData.cc
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/ModelData.o model/ModelData.cc
 
+${OBJECTDIR}/model/ModelGame.o: model/ModelGame.cc 
+	${MKDIR} -p ${OBJECTDIR}/model
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/ModelGame.o model/ModelGame.cc
+
 ${OBJECTDIR}/model/ModelUser.o: model/ModelUser.cc 
 	${MKDIR} -p ${OBJECTDIR}/model
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/ModelUser.o model/ModelUser.cc
+
+${OBJECTDIR}/model/Product.o: model/Product.cc 
+	${MKDIR} -p ${OBJECTDIR}/model
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/Product.o model/Product.cc
+
+${OBJECTDIR}/model/db_objects/Game.o: model/db_objects/Game.cc 
+	${MKDIR} -p ${OBJECTDIR}/model/db_objects
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/model/db_objects/Game.o model/db_objects/Game.cc
 
 ${OBJECTDIR}/model/db_objects/User.o: model/db_objects/User.cc 
 	${MKDIR} -p ${OBJECTDIR}/model/db_objects

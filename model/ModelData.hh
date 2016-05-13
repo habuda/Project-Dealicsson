@@ -14,6 +14,7 @@
 
 #include "../Session.hh"
 #include "ModelUser.hh"
+#include "ModelGame.hh"
 
 //==================================================================================================
 
@@ -27,6 +28,7 @@ public:
     Session &m_rSession;
 
     ModelUser m_ModelUser;
+    ModelGame m_ModelGame;
 };
 
 //==================================================================================================

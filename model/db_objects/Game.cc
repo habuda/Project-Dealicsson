@@ -1,34 +1,18 @@
 //==================================================================================================
 /* 
- * File:   Functions.cc
+ * File:   User.cc
  * Author: kdur
  *
- * Created on April 28, 2016, 8:56 AM
+ * Created on April 28, 2016, 9:21 AM
  */
 //==================================================================================================
 
-#include "Functions.hh"
-
-#include <sstream>
-#include <string>
+#include "Game.hh"
+#include <Wt/Dbo/Impl>
 
 //==================================================================================================
 
-std::string intToString(int a_iValue)
-{
-    std::string lstr;
-
-    std::stringstream strum;
-    strum << a_iValue;
-    lstr = strum.str();
-
-    return lstr;
-}
+DBO_INSTANTIATE_TEMPLATES(Game);
 
 //==================================================================================================
 
-int WStringToInt(const Wt::WString& s)
-{
-  const std::string t(s.toUTF8());
-  return std::atoi(t.c_str());
-}

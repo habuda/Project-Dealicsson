@@ -9,6 +9,12 @@
 #define	WIDGETPRODUCTION_HH
 
 #include "Widget.hh"
+#include <vector>
+#include <Wt/WPushButton>
+#include <string>
+#include <Wt/WTimer>
+#include <Wt/WLineEdit>
+#include <Wt/WText>
 
 //==================================================================================================
 
@@ -21,7 +27,14 @@ class WidgetProduction : public Widget
 public:
     WidgetProduction(Controller *a_pController = 0, Wt::WContainerWidget *a_pParent = 0);
     virtual ~WidgetProduction();
+    WText        *textWeed;
+    void seedWeed();
+private:
+    WContainerWidget *seed;
+    WTimer *timer;
 };
+
+
 
 #endif	/* WIDGETSALES_HH */
 

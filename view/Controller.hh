@@ -38,6 +38,8 @@ class WidgetFooter;
 
 #include "Widget.hh"
 
+
+#include "../model/Product.hh"
 //==================================================================================================
 
 using namespace Wt;
@@ -58,6 +60,7 @@ public:
 
     void handlePathChange(const std::string& a_sPath);
     
+    Product weed;  
 private:
     bool m_bShowHelp;
     std::string m_sBasePath;
